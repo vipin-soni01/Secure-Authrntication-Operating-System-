@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Secure Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Secure Login</h2>
+
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+
+  <input type="checkbox" onclick="togglePassword()"> Show Password
+
+  <p class="error" id="errorMsg"></p>
+  <p class="locked" id="lockMsg"></p>
+
+  <button onclick="login()">Login</button>
+  <a href="http://127.0.0.1:5501/auth/google" class="google-btn" style="display:inline-block;background:#db4437;color:#fff;padding:10px 12px;margin-top:8px;text-decoration:none;border-radius:4px;">Login with Google</a>
+
+  <p>Don't have an account? <a href="register.html">Register</a></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!-- to start the backend server, run the following command in the terminal:
+node server.js
+Make sure you have Node.js installed and the necessary dependencies (like Express) set up in your project. The server will listen for incoming requests from the frontend and handle authentication logic accordingly.
+npm start -->

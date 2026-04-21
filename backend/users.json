@@ -1,0 +1,20 @@
+[
+  {
+    "user": "test",
+    "email": "suryansh0406@gmail.com",
+    "pass": "Surya@1234",
+    "role": "user"
+  },
+  {
+    "user": "Admin",
+    "email": "itzmybusiness2@gmail.com",
+    "pass": "npm start",
+    "role": "admin"
+  },
+  {
+    "user": "Vipin",
+    "email": "sonivipin553@gmail.com",
+    "pass": "Vipin@1234",
+    "role": "user"
+  }
+]
