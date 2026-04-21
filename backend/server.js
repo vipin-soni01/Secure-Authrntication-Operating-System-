@@ -1,5 +1,5 @@
 // =======================
-// Secure Authentication Framework - Server
+// Secure Authentication Framework - Servers
 // =======================''
 
 require('dotenv').config();
@@ -57,7 +57,7 @@ let loginAttempts = {};
 let securityLogs = [];
 
 const MAX_ATTEMPTS = 3;
-const LOCK_TIME = 2 * 60 * 1000; // 2 minutes
+const LOCK_TIME = 2 * 60 * 1000; // 2 minutes (120 seconds)
 
 // =======================
 // Helper Functions
@@ -138,7 +138,7 @@ app.post('/register', (req, res) => {
   if (!isStrongPassword(pass)) {
     return res.status(400).json({
       error:
-        'Password must be at least 8 characters and include uppercase, number, and special character.',
+        'Password must be at least 8 Characters and include Uppercase, Number, and Special character in it.',
     });
   }
 
@@ -308,7 +308,7 @@ app.get('/oauth2callback', async (req, res) => {
       email: email,
     };
 
-    // Send OTP email
+    // Send OTP to your email
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
@@ -361,7 +361,7 @@ app.post('/verify-otp', (req, res) => {
 });
 
 // =======================
-// Admin Routes
+// Admin Routes       
 // =======================
 app.get('/get-users', authenticate, (req, res) => {
   res.json(users);
